@@ -15,9 +15,9 @@ export default function Hero() {
         {/* Left Column: Text & CTA */}
         <div className="lg:col-span-7 flex flex-col justify-center">
           {/* Eyebrow badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#7c96ff]/30 bg-[#7c96ff]/10 text-[#92a8ff] text-xs font-semibold w-fit mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#7c96ff]/30 bg-[#7c96ff]/10 text-[#92a8ff] text-xs font-semibold w-fit mb-4">
             <span className="w-2 h-2 rounded-full bg-[#7c96ff] animate-ping" />
-            <span>Software Engineering Student</span>
+            <span>Co-Founder & Co-CTO · Axiora Software Labs</span>
           </div>
 
           <div className="text-[11px] tracking-widest uppercase font-mono text-[#6f7c91] mb-2">
@@ -30,9 +30,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-base text-[#8e99ad] max-w-xl leading-relaxed mb-6">
-            Hi, I&apos;m <strong className="text-white font-semibold">{personalInfo.name}</strong>. A dedicated Software
-            Engineering student passionate about technology, problem-solving, and continuous learning. Focused on web
-            development, system design, and machine learning research.
+            Hi, I&apos;m <strong className="text-white font-semibold">{personalInfo.name}</strong>. Co-Founder & Co-CTO at{" "}
+            <span className="text-white font-semibold underline decoration-[#7c96ff]/50 decoration-2 underline-offset-4">Axiora Software Labs</span> and a Software
+            Engineering student at DIU. Passionate about leading scalable architecture, innovative digital solutions, and machine learning research.
           </p>
 
           {/* Meta Information */}
@@ -135,8 +135,8 @@ export default function Hero() {
                 <Sparkles className="w-4 h-4" />
               </div>
               <div>
-                <b className="text-xs block text-white font-semibold">Software & Research</b>
-                <small className="text-[10px] text-[#758198]">Continuous Learner</small>
+                <b className="text-xs block text-white font-semibold">Axiora Software Labs</b>
+                <small className="text-[10px] text-[#9badff] font-medium">Co-Founder & Co-CTO</small>
               </div>
             </div>
 

@@ -75,7 +75,7 @@ export interface ReferenceItem {
 export const portfolioData = {
   personalInfo: {
     name: "Faysul Ahmed",
-    title: "Software Engineering Student & Researcher",
+    title: "Co-Founder & Co-CTO at Axiora Software Labs | Software Engineering Student & Researcher",
     subtitle: "Building digital experiences that matter with code, AI and hardware.",
     department: "Department of Software Engineering",
     institution: "Daffodil International University",
@@ -83,7 +83,7 @@ export const portfolioData = {
     location: "DSC, Ashulia, Savar, Dhaka, Bangladesh",
     email: "faysulahmed14@gmail.com",
     phone: "01303338036",
-    bio: "I am a dedicated Software Engineering student passionate about technology, problem-solving, and continuous learning. I thrive in diverse, collaborative environments and enjoy embracing new challenges. As an aspiring international student, I aim to broaden my academic and cultural perspectives, connect with people from different backgrounds, and grow into a confident, globally aware Software Engineer who can contribute meaningfully to society.",
+    bio: "I am a dedicated Software Engineering student and Co-Founder & Co-CTO of Axiora Software Labs. Passionate about technology, system architecture, problem-solving, and continuous learning. I thrive in diverse, collaborative environments and enjoy leading innovative digital solutions. As an aspiring international student, I aim to broaden my academic and cultural perspectives, connect globally, and grow into a confident, impactful Software Engineer and tech entrepreneur.",
     github: "https://github.com/faysulahmed14-design",
     linkedin: "https://www.linkedin.com/in/faysul-ahmed-",
     cvUrl: "/assets/Faysul_Ahmed_CV.pdf",
@@ -91,13 +91,20 @@ export const portfolioData = {
   },
 
   stats: [
+    { label: "Executive Role", value: "Co-CTO" },
     { label: "Avg CGPA (6th Sem)", value: "3.89" },
     { label: "Core Projects", value: "4+" },
     { label: "ML Research", value: "2" },
-    { label: "Scouts Unit Led", value: "100+" },
   ],
 
   experiences: [
+    {
+      title: "Co-Founder & Co-CTO",
+      company: "Axiora Software Labs",
+      period: "Present",
+      description: "Co-leading technical architecture, engineering strategy, and product roadmap. Directing software development, cloud infrastructure, and innovative client & internal solutions.",
+      badge: "Executive Leadership"
+    },
     {
       title: "Research Executive (Intern)",
       company: "Skill Chefs",

@@ -4,7 +4,7 @@ export default function About() {
   const { personalInfo, stats } = portfolioData;
 
   const details = [
-    { num: "01", label: "Full Name", value: personalInfo.name },
+    { num: "01", label: "Executive Role", value: "Co-Founder & Co-CTO — Axiora Software Labs" },
     { num: "02", label: "Institution", value: personalInfo.institution },
     { num: "03", label: "Program", value: "B.Sc in Software Engineering" },
     { num: "04", label: "Location", value: personalInfo.location },
