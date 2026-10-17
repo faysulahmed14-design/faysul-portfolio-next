@@ -114,7 +114,8 @@ export const portfolioData = {
       company: "Skill Chefs",
       period: "August 2026 – Present",
       description: "Conducting domain research on emerging tech paradigms, analyzing user learning trends, and developing structured technical and academic evaluation methodologies.",
-      badge: "Internship"
+      badge: "Internship",
+      logo: "/assets/skillchefs.png"
     },
     {
       title: "Student Associate",
