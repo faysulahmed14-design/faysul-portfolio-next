@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Briefcase } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
@@ -14,40 +15,78 @@ export default function Experience() {
           Professional & <span className="text-gradient">Practical Experience.</span>
         </h2>
         <p className="text-sm text-[#8e99ad] mt-3 max-w-2xl">
-          Hands-on roles in research execution, youth career development, and operational data management.
+          Executive leadership, research execution, youth career development, and operational data management.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {experiences.map((exp, idx) => (
-          <div
-            key={idx}
-            className="glass-panel glass-panel-hover rounded-3xl p-7 flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#7c96ff]/10 flex items-center justify-center text-[#92a8ff]">
-                  <Briefcase className="w-5 h-5" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {experiences.map((exp, idx) => {
+          const isExecutive = exp.badge === "Executive Leadership";
+
+          return (
+            <div
+              key={idx}
+              className={`glass-panel glass-panel-hover rounded-3xl p-7 flex flex-col justify-between relative overflow-hidden ${
+                isExecutive
+                  ? "border-[#7c96ff]/40 bg-gradient-to-br from-[#0c101d]/90 via-[#111730]/80 to-[#0c101d]/90 shadow-2xl shadow-[#7c96ff]/10"
+                  : ""
+              }`}
+            >
+              {isExecutive && (
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#7c96ff]/10 rounded-full blur-2xl pointer-events-none" />
+              )}
+
+              <div>
+                <div className="flex items-start justify-between gap-3 mb-5">
+                  {exp.logo ? (
+                    <div className="w-13 h-13 rounded-2xl overflow-hidden border border-[#7c96ff]/30 bg-black/80 p-1 flex items-center justify-center shadow-lg shadow-[#7c96ff]/25 hover:scale-105 transition-transform">
+                      <Image
+                        src={exp.logo}
+                        alt={exp.company}
+                        width={52}
+                        height={52}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-11 h-11 rounded-xl bg-[#7c96ff]/10 border border-[#7c96ff]/20 flex items-center justify-center text-[#92a8ff]">
+                      <Briefcase className="w-5 h-5" />
+                    </div>
+                  )}
+
+                  {exp.badge && (
+                    <span
+                      className={`text-[10px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full border ${
+                        isExecutive
+                          ? "bg-[#7c96ff]/20 border-[#7c96ff]/50 text-[#b7c7ff] shadow-sm shadow-[#7c96ff]/30"
+                          : "bg-[#7c96ff]/15 border-[#7c96ff]/30 text-[#9badff]"
+                      }`}
+                    >
+                      {exp.badge}
+                    </span>
+                  )}
                 </div>
-                {exp.badge && (
-                  <span className="text-[10px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full bg-[#7c96ff]/15 border border-[#7c96ff]/30 text-[#9badff]">
-                    {exp.badge}
-                  </span>
-                )}
+
+                <h3 className="text-lg font-bold text-white mb-1">{exp.title}</h3>
+
+                <div className="flex items-baseline gap-2 mb-2 flex-wrap">
+                  <span className="text-xs text-[#92a8ff] font-semibold">{exp.company}</span>
+                  {exp.tagline && (
+                    <span className="text-[11px] text-[#79869e] italic">— {exp.tagline}</span>
+                  )}
+                </div>
+
+                <span className="inline-block text-[11px] text-[#79869e] bg-white/[0.03] border border-white/10 px-3 py-1 rounded-full mb-4">
+                  {exp.period}
+                </span>
+
+                <p className="text-xs text-[#8e99ad] leading-relaxed">
+                  {exp.description}
+                </p>
               </div>
-
-              <h3 className="text-base font-bold text-white mb-1">{exp.title}</h3>
-              <span className="text-xs text-[#92a8ff] font-medium block mb-2">{exp.company}</span>
-              <span className="inline-block text-[11px] text-[#79869e] bg-white/[0.03] border border-white/10 px-3 py-1 rounded-full mb-4">
-                {exp.period}
-              </span>
-
-              <p className="text-xs text-[#8e99ad] leading-relaxed">
-                {exp.description}
-              </p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

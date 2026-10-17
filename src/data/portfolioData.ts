@@ -21,6 +21,8 @@ export interface Experience {
   period: string;
   description: string;
   badge?: string;
+  logo?: string;
+  tagline?: string;
 }
 
 export interface SkillItem {
@@ -103,7 +105,9 @@ export const portfolioData = {
       company: "Axiora Software Labs",
       period: "Present",
       description: "Co-leading technical architecture, engineering strategy, and product roadmap. Directing software development, cloud infrastructure, and innovative client & internal solutions.",
-      badge: "Executive Leadership"
+      badge: "Executive Leadership",
+      logo: "/assets/axiora.png",
+      tagline: "Where Intelligence Meets Innovation."
     },
     {
       title: "Research Executive (Intern)",
