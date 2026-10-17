@@ -39,12 +39,18 @@ export default function Experience() {
               <div>
                 <div className="flex items-start justify-between gap-3 mb-5">
                   {exp.logo ? (
-                    <div className="w-13 h-13 rounded-2xl overflow-hidden border border-[#7c96ff]/30 bg-black/80 p-1 flex items-center justify-center shadow-lg shadow-[#7c96ff]/25 hover:scale-105 transition-transform">
+                    <div
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border border-white/15 p-1.5 flex items-center justify-center shadow-lg transition-transform hover:scale-105 ${
+                        exp.company.toLowerCase().includes("skill")
+                          ? "bg-white border-white/40 shadow-black/30"
+                          : "bg-black/90 border-[#7c96ff]/40 shadow-[#7c96ff]/25"
+                      }`}
+                    >
                       <Image
                         src={exp.logo}
                         alt={exp.company}
-                        width={52}
-                        height={52}
+                        width={56}
+                        height={56}
                         className="w-full h-full object-contain"
                       />
                     </div>

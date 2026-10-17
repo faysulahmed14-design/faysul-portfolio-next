@@ -118,10 +118,11 @@ export const portfolioData = {
     },
     {
       title: "Student Associate",
-      company: "Skil Jobs",
+      company: "Skill.jobs",
       period: "October 2026 – Present",
       description: "Driving student outreach, coordinating cross-institutional youth employability summits, and linking aspiring engineers with corporate skill-building programs.",
-      badge: "Associate"
+      badge: "Associate",
+      logo: "/assets/skilljobs.png"
     },
     {
       title: "Computer Operator (Data Entry)",
